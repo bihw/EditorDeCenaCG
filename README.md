@@ -1,8 +1,7 @@
 # Editor De Cena 
 Implementação de um editor de cena simples em __WebGL__ para o primeiro trabalho da disciplina de Computação Gráfica na UFPel.
 
-## 🛠️ Executando:
-
+* https://editor-de-cena-cg.vercel.app/
 
 ## ✅ To do
 * ✔️ O site deve ter um menu com uma lista dos modelos disponíveis, mostrar em 3D e não só os
