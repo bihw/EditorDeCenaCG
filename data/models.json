@@ -1,0 +1,174 @@
+[
+    {
+        "name": "Arch",
+        "href": "arch.obj"
+    },
+    {
+        "name": "Left Arch Gate",
+        "href": "arch_gate_left.obj"
+    },
+    {
+        "name": "Right Arch Gate",
+        "href": "arch_gate_right.obj"
+    },
+    {
+        "name": "Bench",
+        "href": "bench.obj"
+    },
+    {
+        "name": "Decorated Bench",
+        "href": "bench_decorated.obj"
+    },
+    {
+        "name": "Bone",
+        "href": "bone_C.obj"
+    },
+    {
+        "name": "Melted Candle",
+        "href": "candle_melted.obj"
+    },
+    {
+        "name": "Triple Candle",
+        "href": "candle_triple.obj"
+    },
+    {
+        "name": "Decorated Coffin",
+        "href": "coffin_decorated.obj"
+    },
+    {
+        "name": "Coffin Lid",
+        "href": "coffin_lid.obj"
+    },
+    {
+        "name": "Fence",
+        "href": "fence.obj"
+    },
+    {
+        "name": "Broken Fence",
+        "href": "fence_broken.obj"
+    },
+    {
+        "name": "Fence Gate",
+        "href": "fence_gate.obj"
+    },
+    {
+        "name": "Broken Fence Pillar",
+        "href": "fence_pillar_broken.obj"
+    },
+    {
+        "name": "Dirt Floor",
+        "href": "floor_dirt.obj"
+    },
+    {
+        "name": "Grave Dirt Floor",
+        "href": "floor_dirt_grave.obj"
+    },
+    {
+        "name": "Small Dirt Floor",
+        "href": "floor_dirt_small.obj"
+    },
+    {
+        "name": "Grave A",
+        "href": "grave_A.obj"
+    },
+    {
+        "name": "Destroyed Grave A",
+        "href": "grave_A_destroyed.obj"
+    },
+    {
+        "name": "Grave B",
+        "href": "grave_B.obj"
+    },
+    {
+        "name": "Gravemarker A",
+        "href": "gravemarker_A.obj"
+    },
+    {
+        "name": "Gravemarker B",
+        "href": "gravemarker_B.obj"
+    },
+    {
+        "name": "Gravestone",
+        "href": "gravestone.obj"
+    },
+    {
+        "name": "Standing Lantern",
+        "href": "lantern_standing.obj"
+    },
+    {
+        "name": "Path A",
+        "href": "path_A.obj"
+    },
+    {
+        "name": "Path B",
+        "href": "path_B.obj"
+    },
+    {
+        "name": "Path C",
+        "href": "path_C.obj"
+    },
+    {
+        "name": "Path D",
+        "href": "path_D.obj"
+    },
+    {
+        "name": "Pillar",
+        "href": "pillar.obj"
+    },
+    {
+        "name": "Plaque",
+        "href": "plaque.obj"
+    },
+    {
+        "name": "Candles Plaque",
+        "href": "plaque_candles.obj"
+    },
+    {
+        "name": "Post",
+        "href": "post.obj"
+    },
+    {
+        "name": "Post Skull",
+        "href": "post_skull_skull.obj"
+    },
+    {
+        "name": "Orange Pumpkin",
+        "href": "pumpkin_orange_jackolantern.obj"
+    },
+    {
+        "name": "Yellow Pumpkin",
+        "href": "pumpkin_yellow_jackolantern.obj"
+    },
+    {
+        "name": "Shrine",
+        "href": "shrine.obj"
+    },
+    {
+        "name": "Candles Shrine",
+        "href": "shrine_candles.obj"
+    },
+    {
+        "name": "Skull",
+        "href": "skull.obj"
+    },
+    {
+        "name": "Candle Skull",
+        "href": "skull_candle.obj"
+    },
+    {
+        "name": "Large Dead Tree",
+        "href": "tree_dead_large_decorated.obj"
+    },
+    {
+        "name": "Small Dead Tree",
+        "href": "tree_dead_small.obj"
+    },
+    {
+        "name": "Orange Pine Tree",
+        "href": "tree_pine_orange_medium.obj"
+    },
+    {
+        "name": "Yellow Pine Tree",
+        "href": "tree_pine_yellow_medium.obj"
+    }
+]
