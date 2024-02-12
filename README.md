@@ -4,7 +4,7 @@ Implementação de um editor de cena simples em __WebGL__ para o primeiro trabal
 * https://editor-de-cena-cg.vercel.app/
 
 <p align="center">
-<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/10942bc9-de6e-483a-931a-ebd43397ad4c" width="70%" height="70%" >
+<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/10942bc9-de6e-483a-931a-ebd43397ad4c" width="80%" height="80%" >
 </p>
 
 ## ✅ To do
