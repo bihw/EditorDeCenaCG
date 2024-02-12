@@ -38,7 +38,7 @@ async function main() {
     models.forEach((obj, index) => {
         const model = document.getElementById('model' + String(index));
         model.addEventListener('click', () => {  // click models
-            objsOnScene.push(new Obj(obj, i, [1, 1, 1], [degToRad(0), degToRad(0), degToRad(0)],
+            objsOnScene.push(new Obj(obj, i+objsOnScene.length, [1, 1, 1], [degToRad(0), degToRad(0), degToRad(0)],
                 [0, 0, 0], " ", [255, 255, 255], [255, 255, 255], 400, 1,
                 gl, meshProgramInfo));
             i++;
@@ -71,10 +71,7 @@ async function main() {
                     if (objs) {
                         let i = 0;
                         objs.forEach((obj) => {
-                            objsOnScene.push(new Obj(obj, i, obj.scale,
-                                obj.rotation, obj.translation, obj.diffuseMap, obj.diffuse,
-                                obj.specular, obj.shininess, obj.opacity,
-                                gl, meshProgramInfo));
+                            objsOnScene.push(new Obj(obj, i, obj.scale, obj.rotation, obj.translation, obj.diffuseMap, obj.diffuse, obj.specular, obj.shininess, obj.opacity, gl, meshProgramInfo));
                             i++;
                         });
                     }
