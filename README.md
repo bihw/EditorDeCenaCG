@@ -4,7 +4,7 @@ Implementação de um editor de cena simples em __WebGL__ para o primeiro trabal
 * https://editor-de-cena-cg.vercel.app/
 
 <p align="center">
-<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/10942bc9-de6e-483a-931a-ebd43397ad4c" width="30%" height="30%" >
+<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/10942bc9-de6e-483a-931a-ebd43397ad4c" width="50%" height="50%" >
 </p>
 
 ## ✅ To do
@@ -22,5 +22,5 @@ devem ser diferentes entre as instâncias do mesmo modelo na cena.
 * ✔️ Salvar a cena num arquivo json e ser possível carregar um json salvo.
 
 <p align="center">
-<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/9716c8f3-79b7-4dc2-aa02-0f83cc2f62d4" width="45%" height="40%" >
+<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/896f8479-809c-4175-8779-7bd6a714608c" width="45%" height="40%" >
 </p>
