@@ -1,6 +1,6 @@
 class Obj extends Model {
     constructor(obj, index, scale, rotation, translation, diffuseMap, diffuse, specular,
-            shininess, opacity, gl, meshProgramInfo) {
+        shininess, opacity, gl, meshProgramInfo) {
         super(obj, index, gl, meshProgramInfo);
         this.scale = scale;
         this.rotation = rotation;
@@ -91,7 +91,7 @@ class Obj extends Model {
                     m4.scaleVector(range, 0.5)),
                 -1);
         }
-        
+
         this.cameraTarget = [0, 0, 0];
         const radius = m4.length(range) * 1.0;
         this.cameraPosition = [0, 0, 10];
@@ -179,7 +179,7 @@ class Obj extends Model {
         const list = createElem('div', contentElem, 'objList');
         list.id = "objList" + this.index;
         list.style.fontSize = "13pt";
-        list.innerText = String(this.index+1) + ". " + this.name;
+        list.innerText = String(this.index + 1) + ". " + this.name;
         list.addEventListener("mouseover", function (event) {
             event.target.style.cursor = "pointer";
             event.target.style.color = "white";
