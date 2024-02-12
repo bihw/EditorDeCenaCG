@@ -96,7 +96,7 @@ class Obj extends Model {
         const radius = m4.length(range) * 1.0;
         this.cameraPosition = [0, 0, 10];
 
-        this.zNear = radius / 100;
+        this.zNear = radius / 150;
         this.zFar = radius * 15;
 
         requestAnimationFrame(this.render);
@@ -328,10 +328,10 @@ class Obj extends Model {
             <input type="range" min="0" max="255" id="specb${String(this.index)}" value="${this.specular[2]}">
 
             <div class="ti">Shininess</div>
-            <input type="range" min="0" max="1000" id="shi${String(this.index)}" value="${this.shininess}">
+            <input type="range" min="0" max="500" id="shi${String(this.index)}" value="${this.shininess}">
 
             <div class="ti">Opacity</div>
-            <input type="range" min="0" max="1" step="0.001" id="op${String(this.index)}" value="${this.opacity}">
+            <input type="range" min="0" max="1" step="0.01" id="op${String(this.index)}" value="${this.opacity}">
 
         `;
     }
