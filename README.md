@@ -4,8 +4,9 @@ Implementação de um editor de cena simples em __WebGL__ para o primeiro trabal
 * https://editor-de-cena-cg.vercel.app/
 
 <p align="center">
-<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/10942bc9-de6e-483a-931a-ebd43397ad4c">
+<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/fb382c1a-5de5-45ab-bb91-f5aafbb4a7ce">
 </p>
+
 
 ## ✅ To do
 * ✔️ O site deve ter um menu com uma lista dos modelos disponíveis, mostrar em 3D e não só os
@@ -27,5 +28,5 @@ devem ser diferentes entre as instâncias do mesmo modelo na cena.
 
 
 ### Créditos
-* Objetos: <a href="https://kaylousberg.itch.io/halloween-bits">por Kay Louserg - itch.io</a>
-* Ícone add: <a href="https://www.flaticon.com/br/icones-gratis/adicionar-botao">por Mayor Icons - Flaticon</a>
+* Objetos: <a href="https://kaylousberg.itch.io/halloween-bits">Kay Louserg - itch.io</a>
+* Ícone add: <a href="https://www.flaticon.com/br/icones-gratis/adicionar-botao">Mayor Icons - Flaticon</a>
