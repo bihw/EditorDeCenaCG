@@ -24,3 +24,8 @@ devem ser diferentes entre as instâncias do mesmo modelo na cena.
 <p align="center">
 <img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/896f8479-809c-4175-8779-7bd6a714608c" width="45%" height="40%" >
 </p>
+
+
+### Créditos
+* Objetos: <a href="https://kaylousberg.itch.io/halloween-bits">por Kay Louserg - itch.io</a>
+* Ícone add: <a href="https://www.flaticon.com/br/icones-gratis/adicionar-botao">por Mayor Icons - Flaticon</a>
