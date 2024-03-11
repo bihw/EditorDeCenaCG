@@ -21,7 +21,7 @@ nomes: quando clica no modelo ele deve aparecer no centro da cena
 devem ser diferentes entre as instâncias do mesmo modelo na cena.
 * ❔ Os menus, botões e textos são em html e não dentro do webgl.
 * ✔️ Salvar a cena num arquivo json e ser possível carregar um json salvo.
-Parte 2:
+<br> Parte 2:
 * Permitir adicionar até 5 luzes
 * Adicionar Toon Shader
 
@@ -32,4 +32,7 @@ Parte 2:
 
 ### Créditos
 * Objetos: <a href="https://kaylousberg.itch.io/halloween-bits">Kay Louserg - itch.io</a>
-* Ícone add: <a href="https://www.flaticon.com/br/icones-gratis/adicionar-botao">Mayor Icons - Flaticon</a>
+
+<p align="center">
+<img src=https://github.com/bihw/EditorDeCenaCG/assets/76601652/49a2e844-cb42-4ede-b181-1fa2f2b9bfbd>
+</p>
