@@ -21,8 +21,7 @@ nomes: quando clica no modelo ele deve aparecer no centro da cena
 devem ser diferentes entre as instâncias do mesmo modelo na cena.
 * ❔ Os menus, botões e textos são em html e não dentro do webgl.
 * ✔️ Salvar a cena num arquivo json e ser possível carregar um json salvo.
-<br>
-Parte 2:
+<br><br> Parte 2:
 * Permitir adicionar até 5 luzes
 * Adicionar Toon Shader
 
