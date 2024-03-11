@@ -21,12 +21,13 @@ nomes: quando clica no modelo ele deve aparecer no centro da cena
 devem ser diferentes entre as instâncias do mesmo modelo na cena.
 * ❔ Os menus, botões e textos são em html e não dentro do webgl.
 * ✔️ Salvar a cena num arquivo json e ser possível carregar um json salvo.
-<br> Parte 2:
+<br>
+Parte 2:
 * Permitir adicionar até 5 luzes
 * Adicionar Toon Shader
 
 <p align="center">
-<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/896f8479-809c-4175-8779-7bd6a714608c" width="45%" height="40%" >
+<img src="https://github.com/bihw/EditorDeCenaCG/assets/76601652/896f8479-809c-4175-8779-7bd6a714608c" width="40%" height="35%" >
 </p>
 
 
