@@ -9,6 +9,7 @@ Implementação de um editor de cena simples em __WebGL__ para o trabalho final 
 
 
 ## ✅ To do
+Parte 1:
 * ✔️ O site deve ter um menu com uma lista dos modelos disponíveis, mostrar em 3D e não só os
 nomes: quando clica no modelo ele deve aparecer no centro da cena
 * ✔️ O site deve ter outro menu onde seja possível editar as propriedades dos modelos na cena
