@@ -96,7 +96,6 @@ const vertexShader = `#version 300 es
     v_normal = mat3(u_world) * a_normal;
     v_texcoord = a_texcoord;
     v_color = a_color;
-    
     for (int i = 0; i < u_lights; i++) {
       v_lightPosition[i] = u_lightDirection[i] - worldPosition.xyz;
     }
@@ -131,10 +130,10 @@ const fragmentShader = `#version 300 es
   void main () {
     vec3 normal = normalize(v_normal);
     vec3 surfaceToViewDirection = normalize(v_surfaceToView);
-
     vec3 finalColor = vec3(0.0); 
 
     float step = 1.0;
+    
     if (u_toonShader == 1) {
         float totalDiffuseFactor = 0.0; 
         for (int i = 0; i < u_lights; i++) { 
@@ -152,7 +151,6 @@ const fragmentShader = `#version 300 es
         vec3 ld = normalize(v_lightPosition[i]);
         float df = max(dot(normal, ld), 0.0);
         finalColor += diffuse * step * df * u_lightIntensity[i];
-        
         vec3 halfVector = normalize(ld + surfaceToViewDirection);
         float specularFactor = pow(max(dot(normal, halfVector), 0.0), shininess * 0.3);
         specularColor += specular * specularFactor * u_lightIntensity[i] * u_colorLight[i]; 
