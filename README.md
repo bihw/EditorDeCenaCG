@@ -32,7 +32,7 @@ Parte 2:
 </p>
 
 
-### Créditos
+### 📃 Créditos
 * Objetos: <a href="https://kaylousberg.itch.io/halloween-bits">Kay Louserg - itch.io</a>
 
 <p align="center">
