@@ -180,16 +180,24 @@ class Model {
 
         labelElem.innerText = this.name;
         labelElem.style.fontSize = "13pt";
-        labelElem.style.backgroundColor = "black";
+        labelElem.style.padding = "1px";
+        labelElem.style.backgroundColor = "#013440";
         labelElem.style.color = "white";
+        labelElem.style.borderTopRightRadius = "6px";
+        labelElem.style.borderTopLeftRadius = "6px";
 
         viewElem.id = 'model' + String(this.index);
         viewElem.style.border = "1px solid black";
+        viewElem.style.borderRadius = "10px";
         viewElem.addEventListener("mouseover", function (event) {
-            event.target.style.border = "3px solid black";
+            event.target.style.border = "3px solid #013440";
+            event.target.style.fontWeight = "bold";
+            event.target.style.cursor = "pointer";
         });
         viewElem.addEventListener("mouseout", function (event) {
-            event.target.style.border = "1px solid black";
+            event.target.style.border = "1px solid #013440";
+            event.target.style.fontWeight = "normal";
+            event.target.style.cursor = "auto";
         });
 
         if (this.index == 0) { viewElem.style.marginTop = "7px"; }
