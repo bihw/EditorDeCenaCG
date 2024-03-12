@@ -1,6 +1,6 @@
 class Obj extends Model {
     constructor(obj, index, scale, rotation, translation, diffuseMap, diffuse, specular,
-        shininess, opacity, gl, meshProgramInfo) {
+        shininess, opacity, gl, meshProgramInfo, lights, toonShader) {
         super(obj, index, gl, meshProgramInfo);
         this.scale = scale;
         this.rotation = rotation;
@@ -11,11 +11,14 @@ class Obj extends Model {
         this.shininess = shininess;
         this.opacity = opacity;
         this.textures;
+        this.lights = lights;
+        this.toonShader = toonShader;
 
         this.render = this.render.bind(this);
 
         this.insertObj();   // interface
         this.putOnScene();
+        
     }
 
     async putOnScene() {
@@ -116,14 +119,28 @@ class Obj extends Model {
         let camera = m4.lookAt(this.cameraPosition, this.cameraTarget, up);
         const view = m4.inverse(camera);
 
+        let positions = [];
+        let colors = [];
+        let intensities = [];
+        for (let i = 0; i < this.lights.length; i++) {
+            positions.push(this.lights[i].lightDirectionX, this.lights[i].lightDirectionY, this.lights[i].lightDirectionZ);
+            colors.push(this.lights[i].colorLight[0], this.lights[i].colorLight[1], this.lights[i].colorLight[2]);
+            intensities.push(this.lights[i].lightIntensity);
+        }
+
         const sharedUniforms = {
-            u_lightDirection: m4.normalize([-1, 3, 5]),
             u_view: view,
             u_projection: projection,
             u_viewWorldPosition: this.cameraPosition,
+            u_ambientLight: [0.1, 0.1, 0.1],
+            u_lightPosition: positions,
+            u_colorLight: colors, 
+            u_lights: this.lights.length,
+            u_toonShader: this.toonShader ? 1 : 0, 
+            u_lightIntensity: intensities,
         };
-        this.gl.useProgram(this.meshProgramInfo.program);
 
+        this.gl.useProgram(this.meshProgramInfo.program);
         twgl.setUniforms(this.meshProgramInfo, sharedUniforms);
 
         let translationMatrix = m4.translation(this.translation[0], this.translation[1], this.translation[2]);
@@ -171,14 +188,25 @@ class Obj extends Model {
             );
             twgl.drawBufferInfo(this.gl, bufferInfo);
         }
+        
         requestAnimationFrame(this.render);
     }
 
     insertObj() {
+        const test1 = document.getElementById("objList0");
+        if(!test1) {
+            const contentElem = document.getElementById('list');
+            const list = createElem('div', contentElem, 'objList');
+            list.style.fontSize = "15px";
+            list.style.margin = "10px 0 5px 0";
+            list.innerText = "Objetos:";
+        }
+
         const contentElem = document.getElementById('list');
         const list = createElem('div', contentElem, 'objList');
         list.id = "objList" + this.index;
-        list.style.fontSize = "13pt";
+        list.style.fontSize = "16px";
+        list.style.padding = "2px";
         list.innerText = String(this.index + 1) + ". " + this.name;
         list.addEventListener("mouseover", function (event) {
             event.target.style.cursor = "pointer";
@@ -195,15 +223,15 @@ class Obj extends Model {
         list.addEventListener('click', () => {
             for (let i = 0; i <= 99; i++) {
                 let l = document.getElementById("objList" + i);
-                if (l) { l.style.backgroundColor = "rgb(184, 182, 182)"; }
+                if (l) { l.style.backgroundColor = "#C5D7D9"; }
             }
 
-            list.style.backgroundColor = "rgb(115, 188, 247)";
+            list.style.backgroundColor = "#2AB0BF";
 
             const test = document.getElementById("tr");
 
             const a = this.buttons();
-
+            
             if (test) {
                 test.innerHTML = a;
             } else {
@@ -223,7 +251,7 @@ class Obj extends Model {
                     this.scale[i] = parseFloat(scale.value);
                     const span = document.getElementById("s" + x[i]);
                     span.innerHTML = ":&nbsp&nbsp" + scale.value;
-                    span.style.fontSize = "12pt";
+                    span.style.fontSize = "16px";
                 });
             }
 
@@ -233,7 +261,7 @@ class Obj extends Model {
                     this.rotation[i] = degToRad(parseInt(rot.value));
                     const span = document.getElementById("r" + x[i]);
                     span.innerHTML = ":&nbsp&nbsp" + rot.value;
-                    span.style.fontSize = "12pt";
+                    span.style.fontSize = "16px";
                 });
             }
 
@@ -243,7 +271,7 @@ class Obj extends Model {
                     this.translation[i] = parseFloat(t.value);
                     const span = document.getElementById("t" + x[i]);
                     span.innerHTML = ":&nbsp&nbsp" + t.value;
-                    span.style.fontSize = "12pt";
+                    span.style.fontSize = "16px";
                 });
             }
 
@@ -281,7 +309,6 @@ class Obj extends Model {
             op.addEventListener('input', () => {
                 this.opacity = op.value;
             });
-
         });
     }
 
@@ -332,7 +359,7 @@ class Obj extends Model {
 
             <div class="ti">Opacity</div>
             <input type="range" min="0" max="1" step="0.01" id="op${String(this.index)}" value="${this.opacity}">
-
+       
         `;
     }
 }
