@@ -119,13 +119,13 @@ class Obj extends Model {
         let camera = m4.lookAt(this.cameraPosition, this.cameraTarget, up);
         const view = m4.inverse(camera);
 
-        let positions = [];
-        let colors = [];
-        let intensities = [];
+        let lDirections = [];
+        let lColors = [];
+        let lIntensities = [];
         for (let i = 0; i < this.lights.length; i++) {
-            positions.push(this.lights[i].lightDirectionX, this.lights[i].lightDirectionY, this.lights[i].lightDirectionZ);
-            colors.push(this.lights[i].colorLight[0], this.lights[i].colorLight[1], this.lights[i].colorLight[2]);
-            intensities.push(this.lights[i].lightIntensity);
+            lDirections.push(this.lights[i].lightDirectionX, this.lights[i].lightDirectionY, this.lights[i].lightDirectionZ);
+            lColors.push(this.lights[i].colorLight[0], this.lights[i].colorLight[1], this.lights[i].colorLight[2]);
+            lIntensities.push(this.lights[i].lightIntensity);
         }
 
         const sharedUniforms = {
@@ -133,11 +133,11 @@ class Obj extends Model {
             u_projection: projection,
             u_viewWorldPosition: this.cameraPosition,
             u_ambientLight: [0.1, 0.1, 0.1],
-            u_lightPosition: positions,
-            u_colorLight: colors, 
+            u_lightDirection: lDirections,
+            u_colorLight: lColors, 
             u_lights: this.lights.length,
             u_toonShader: this.toonShader ? 1 : 0, 
-            u_lightIntensity: intensities,
+            u_lightIntensity: lIntensities,
         };
 
         this.gl.useProgram(this.meshProgramInfo.program);
