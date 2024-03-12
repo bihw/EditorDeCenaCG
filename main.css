@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap");
+
 * {
     text-align: center;
-    font-size: 20pt;
+    font-size: 19pt;
+    font-family: "Modern Antiqua", serif;
 }
 
 body {
@@ -23,10 +26,12 @@ body {
 }
 
 header {
-    background-color: rgb(184, 182, 182);
+    background-color: #c5d7d9;
     grid-area: header;
     margin-top: 5px;
     border-bottom: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #cg {
@@ -36,10 +41,11 @@ header {
 }
 
 nav {
-    background-color: rgb(184, 182, 182);
+    background-color: #C5D7D9;
     grid-area: nav;
     margin-right: 1px;
     height: 100%;
+    border-bottom-left-radius: 10px;
 }
 
 #navScroll {
@@ -54,7 +60,7 @@ nav {
 }
 
 #scene {
-    background-color: gainsboro;
+    background-color: #C5D7D9;
     grid-area: scene;
 }
 
@@ -62,7 +68,8 @@ nav {
     margin-top: 7px;
     width: 730px;
     height: 530px;
-    border: 1px solid blue;
+    border: 1px solid #00b2e4;
+    border-radius: 15px;
 }
 
 #canvasModels {
@@ -76,15 +83,16 @@ nav {
 }
 
 aside {
-    background-color: rgb(184, 182, 182);
+    background-color: #C5D7D9;
     margin-left: 1px;
     grid-area: aside;
+    border-bottom-right-radius: 10px;
 }
 
 #models {
     overflow-y: scroll;
     height: 540px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 footer {
@@ -96,6 +104,7 @@ footer {
 
 .titles {
     border-bottom: 1px solid black;
+    padding: 2px;
 }
 
 #menu {
@@ -117,10 +126,10 @@ footer {
 }
 
 #save {
-    border: none;
-    background-color: rgb(184, 182, 182);
+    background-color: #C5D7D9;
     color: black;
     border: 1px solid black;
+    border-radius: 5px;
     padding: 5px 9px;
     text-align: center;
     text-decoration: none;
@@ -132,16 +141,17 @@ footer {
 }
 
 #load {
-    border: none;
-    background-color: rgb(184, 182, 182);
+    background-color: #C5D7D9;
     color: black;
     border: 1px solid black;
+    border-radius: 5px;
     padding: 5px 9px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13.5px;
     margin-left: 5px;
+    margin-bottom: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -149,13 +159,13 @@ footer {
 #save:hover,
 #load:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: #013440;
     color: white;
 }
 
 #save:disabled,
 #load:disabled{
-    background-color: lightgray;
+    background-color: #C5D7D9;
     color: gray;
     cursor: not-allowed;
 }
@@ -170,8 +180,32 @@ footer {
 #tx,
 #ty,
 #tz {
-    font-size: 12pt;
+    font-size: 14px;
     margin: 1px;
+    padding-top: 5px;
+}
+
+input[type='range'] {
+    overflow: hidden;
+    width: 130px;
+    -webkit-appearance: none;
+    background-color: #b1c4c6;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 14px;
+    -webkit-appearance: none;
+    color: #2AB0BF;
+    margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 14px;
+    cursor: ew-resize;
+    background: #013440;
+    box-shadow: -80px 0 0 80px #2AB0BF;
 }
 
 #text {
@@ -186,7 +220,7 @@ footer {
     background-image: url('data/KayKit_HalloweenBits_1.0_FREE/Assets/obj/halloweenbits_texture.png');
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .button-white {
@@ -194,20 +228,44 @@ footer {
     height: 25px;
     background-color: white;
     border: 1px solid black;
-    border-radius: 2px;
-}
-
-.button-blue {
-    width: 30px;
-    height: 25px;
-    background-color: rgb(0, 162, 255, 0.934);
-    border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .button-text:hover,
 .button-white:hover,
 .button-blue:hover {
-    border: 3px solid black;
+    border: 2px solid black;
     cursor: pointer;
+}
+
+#toonShaderB,
+#addLightB {
+    background-color: #C5D7D9;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13.5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#toonShaderB:hover,
+#addLightB:hover,
+#conf:hover {
+    background-color: #013440;
+    color: white;
+}
+
+#addLightB:disabled {
+    background-color: #C5D7D9;
+    color: gray;
+    cursor: not-allowed;
+}
+
+#lightButtons{
+    margin-top: 10px;
 }
