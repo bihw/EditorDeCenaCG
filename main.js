@@ -107,9 +107,9 @@ async function main() {
     const addL = document.getElementById("addLightB");
     addL.addEventListener('click', () => {
         lights[nLights] = {
-            lightDirectionX: 0,
-            lightDirectionY: 1,
-            lightDirectionZ: 2,
+            lightDirectionX: -1,
+            lightDirectionY: 3,
+            lightDirectionZ: 5,
             colorLight: [255, 255, 255],
             lightIntensity: 1.0,
         }
