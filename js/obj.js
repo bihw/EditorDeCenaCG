@@ -150,11 +150,11 @@ class Obj extends Model {
         let translationMatrix = m4.translation(this.translation[0], this.translation[1], this.translation[2]);
 
         let u_world = m4.identity();
-        u_world = m4.multiply(u_world, translationMatrix);
+        u_world = m4.multiply(u_world, scaleMatrix);
         u_world = m4.multiply(u_world, rotationMatrixX);
         u_world = m4.multiply(u_world, rotationMatrixY);
         u_world = m4.multiply(u_world, rotationMatrixZ);
-        u_world = m4.multiply(u_world, scaleMatrix);
+        u_world = m4.multiply(u_world, translationMatrix);
 
         for (const { bufferInfo, vao, material } of this.parts) {
             if (this.diffuseMap == 'defaultWhite') {
