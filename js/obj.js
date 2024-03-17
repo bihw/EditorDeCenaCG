@@ -143,18 +143,18 @@ class Obj extends Model {
         this.gl.useProgram(this.meshProgramInfo.program);
         twgl.setUniforms(this.meshProgramInfo, sharedUniforms);
 
-        let translationMatrix = m4.translation(this.translation[0], this.translation[1], this.translation[2]);
+        let scaleMatrix = m4.scaling(...this.scale);
         let rotationMatrixX = m4.xRotation(this.rotation[0]);
         let rotationMatrixY = m4.yRotation(this.rotation[1]);
         let rotationMatrixZ = m4.zRotation(this.rotation[2]);
-        let scaleMatrix = m4.scaling(...this.scale);
+        let translationMatrix = m4.translation(this.translation[0], this.translation[1], this.translation[2]);
 
         let u_world = m4.identity();
-        u_world = m4.multiply(u_world, translationMatrix);
+        u_world = m4.multiply(u_world, scaleMatrix);
         u_world = m4.multiply(u_world, rotationMatrixX);
         u_world = m4.multiply(u_world, rotationMatrixY);
-        u_world = m4.multiply(u_world, rotationMatrixZ);
-        u_world = m4.multiply(u_world, scaleMatrix);
+        u_world = m4.multiply(u_world, rotationMatrixZ);        
+        u_world = m4.multiply(u_world, translationMatrix);
 
         for (const { bufferInfo, vao, material } of this.parts) {
             if (this.diffuseMap == 'defaultWhite') {
