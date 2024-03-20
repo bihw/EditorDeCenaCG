@@ -140,6 +140,11 @@ class Obj extends Model {
             u_lightIntensity: lIntensities,
         };
 
+        if(this.toonShader){
+            this.meshProgramInfo = twgl.createProgramInfo(this.gl, [vertexShader, fragmentShaderToon]);
+        }else{
+            this.meshProgramInfo = twgl.createProgramInfo(this.gl, [vertexShader, fragmentShader]);
+        }
         this.gl.useProgram(this.meshProgramInfo.program);
         twgl.setUniforms(this.meshProgramInfo, sharedUniforms);
 
