@@ -128,16 +128,17 @@ class Model {
         const words = this.name.split(' ');
         if (words[0] == 'Post' && words.length > 1) {
             bottom = this.gl.canvas.clientHeight - top - 385;
-        } else
+        } else 
             if (words[1] == 'Dirt' && words.length > 1) {
                 bottom = this.gl.canvas.clientHeight - top - 270;
             } else
                 if (words[words.length - 1] == 'Pillar' || words[0] == 'Post') {
                     bottom = this.gl.canvas.clientHeight - top - 295;
                 }
+        const width = this.gl.canvas.width+15;
 
-        this.gl.viewport(0, bottom, this.gl.canvas.width, this.gl.canvas.height);
-        this.gl.scissor(0, bottom, this.gl.canvas.width, this.gl.canvas.height);
+        this.gl.viewport(0, bottom, width, this.gl.canvas.height);
+        this.gl.scissor(0, bottom, width, this.gl.canvas.height);
 
         const fieldOfViewRadians = degToRad(60);
         const aspect = this.gl.canvas.clientWidth / this.gl.canvas.clientHeight;

@@ -72,7 +72,7 @@ class Obj extends Model {
             } else {
                 data.color = { value: [1, 1, 1, 1] };
             }
-
+            
             const bufferInfo = twgl.createBufferInfoFromArrays(this.gl, data);
             const vao = twgl.createVAOFromBufferInfo(this.gl, this.meshProgramInfo, bufferInfo);
             return {
