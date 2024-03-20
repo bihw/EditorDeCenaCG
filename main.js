@@ -50,6 +50,9 @@ async function main() {
     let nLights = 0;
     addLight();
 
+    if(this.toonShader){
+        this.meshProgramInfo = twgl.createProgramInfo(this.gl, [vertexShader, fragmentShaderToon]);
+    }
     models.forEach((obj, index) => {
         const model = document.getElementById('model' + String(index));
         model.addEventListener('click', () => {  // click models
