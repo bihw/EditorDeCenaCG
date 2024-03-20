@@ -114,15 +114,13 @@ footer {
 
 #transf {
     grid-row: 0/1;
-    margin-top: 15px;
+    margin-top: 4px;
     margin-bottom: 8px;
 }
 
 #list {
     margin-right: 0;
     margin-top: 10px;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 #save {
@@ -189,7 +187,9 @@ input[type='range'] {
     overflow: hidden;
     width: 130px;
     -webkit-appearance: none;
+    appearance: none;
     background-color: #b1c4c6;
+    max-height: 14px;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
@@ -208,8 +208,24 @@ input[type='range']::-webkit-slider-thumb {
     box-shadow: -80px 0 0 80px #2AB0BF;
 }
 
+input[type='range']::-moz-range-runnable-track {
+    -webkit-appearance: none;
+    color: #2AB0BF;
+    margin-top: -1px;
+}
+
+input[type='range']::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    cursor: ew-resize;
+    background: #013440;
+    box-shadow: -80px 0 0 80px #2AB0BF;
+    border-radius: 0;
+}
+
 #text {
-    margin-top: 7px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
@@ -268,4 +284,8 @@ input[type='range']::-webkit-slider-thumb {
 
 #lightButtons{
     margin-top: 10px;
+}
+
+#LTS{
+    margin-bottom: 7px;
 }

@@ -41,7 +41,7 @@ async function main() {
     }
     twgl.setAttributePrefix("a_");
     const meshProgramInfo = twgl.createProgramInfo(gl, [vertexShader, fragmentShader]);
-
+    
     const contentElem = document.getElementById('LTS');
     const t = createElem('div', contentElem, 'tLTS');
     t.style.fontSize = "15px";
@@ -49,7 +49,7 @@ async function main() {
     t.innerText = "Luzes:";
     let nLights = 0;
     addLight();
-
+    
     if(this.toonShader){
         this.meshProgramInfo = twgl.createProgramInfo(this.gl, [vertexShader, fragmentShaderToon]);
     }
@@ -110,9 +110,9 @@ async function main() {
     const addL = document.getElementById("addLightB");
     addL.addEventListener('click', () => {
         lights[nLights] = {
-            lightDirectionX: -1,
-            lightDirectionY: 3,
-            lightDirectionZ: 5,
+            lightDirectionX: 0,
+            lightDirectionY: 1,
+            lightDirectionZ: 2,
             colorLight: [255, 255, 255],
             lightIntensity: 1.0,
         }
@@ -152,7 +152,7 @@ async function main() {
             if (test) {
                 test.innerHTML = a;
             } else {
-                const lb = document.getElementById("lightButtons");
+                const lb = document.getElementById("LTS2");
                 const div = document.createElement("div");
                 div.innerHTML = a;
                 lb.appendChild(div);
