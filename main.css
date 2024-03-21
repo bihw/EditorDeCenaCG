@@ -110,6 +110,7 @@ footer {
 #menu {
     height: fit-content;
     grid-row: 1/2;
+    margin-bottom: 15px;
 }
 
 #transf {
