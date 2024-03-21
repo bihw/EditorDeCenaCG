@@ -37,3 +37,5 @@ Parte 2:
 <p align="center">
 <img src=https://github.com/bihw/EditorDeCenaCG/assets/76601652/49a2e844-cb42-4ede-b181-1fa2f2b9bfbd>
 </p>
+
+* Ícone: <a href="https://icon-icons.com/icon/graphics/14551">Kyo-Tux (Asher) - icon-icons.com</a>
