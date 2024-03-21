@@ -91,6 +91,9 @@ async function main() {
                     let sceneData = JSON.parse(conteudoJSON);
                     if (sceneData.lights) {
                         lights = sceneData.lights;
+                        for (let i = 1; i < lights.length; i++) {
+                            addLight();
+                        }
                     }
                     if (sceneData.objects) {
                         objsOnScene = sceneData.objects.map((obj, i) => {
