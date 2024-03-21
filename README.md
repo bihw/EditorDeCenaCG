@@ -20,7 +20,6 @@ nomes: quando clica no modelo ele deve aparecer no centro da cena
 * ❌❔ Hierarquia dos modelos pra montar a cena
 * ✔️ O modelo só pode existir 1 vez na memória e só as transformações e propriedades da textura
 devem ser diferentes entre as instâncias do mesmo modelo na cena.
-* ❌ Os menus, botões e textos são em html e não dentro do webgl.
 * ✔️ Salvar a cena num arquivo json e ser possível carregar um json salvo.<br><br>
 
 Parte 2:
