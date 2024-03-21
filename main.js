@@ -64,7 +64,6 @@ async function main() {
 
     document.getElementById('save').addEventListener('click', () => {
         const sceneData = {
-            toonShader: toonShader,
             lights: lights,
             objects: objsOnScene
         };
@@ -90,9 +89,6 @@ async function main() {
                 reader.onload = async function (event) {
                     const conteudoJSON = event.target.result;
                     let sceneData = JSON.parse(conteudoJSON);
-                    if (sceneData.toonShader) {
-                        toonShader = sceneData.toonShader;
-                    }
                     if (sceneData.lights) {
                         lights = sceneData.lights;
                     }
